@@ -1,0 +1,108 @@
+:root {
+  color-scheme: light dark;
+  font-family: Inter, Segoe UI, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f2f2f2, #dddddd);
+  color: #111;
+}
+
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+h1 {
+  margin: 0;
+}
+
+.subtitle {
+  margin: 0;
+  opacity: 0.8;
+}
+
+.controls {
+  display: grid;
+  gap: 0.6rem;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+label {
+  font-weight: 600;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  font: inherit;
+}
+
+.size-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 90px;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.size-row label {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  background: #1668ff;
+  color: #fff;
+  border: 0;
+  font-weight: 700;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.preview {
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+canvas {
+  width: min(90vw, 900px);
+  height: auto;
+  border-radius: 8px;
+  background: #f8f8f8;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+@media (min-width: 940px) {
+  .app {
+    grid-template-columns: 360px 1fr;
+    align-items: start;
+  }
+
+  h1,
+  .subtitle {
+    grid-column: 1 / -1;
+  }
+}

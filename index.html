@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meme Generator</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Meme Generator</h1>
+    <p class="subtitle">Pick a template or upload your own image, then add your caption.</p>
+
+    <section class="controls" aria-label="Meme controls">
+      <label for="templateSelect">Template</label>
+      <select id="templateSelect"></select>
+
+      <label for="imageUpload">Upload image</label>
+      <input id="imageUpload" type="file" accept="image/*">
+
+      <label for="topText">Top text</label>
+      <input id="topText" type="text" placeholder="TOP TEXT" value="TOP TEXT">
+
+      <div class="size-row">
+        <label for="topSizeRange">Top size</label>
+        <input id="topSizeRange" type="range" min="20" max="120" value="56">
+        <input id="topSizeNumber" type="number" min="20" max="120" value="56">
+      </div>
+
+      <label for="bottomText">Bottom text</label>
+      <input id="bottomText" type="text" placeholder="BOTTOM TEXT" value="BOTTOM TEXT">
+
+      <div class="size-row">
+        <label for="bottomSizeRange">Bottom size</label>
+        <input id="bottomSizeRange" type="range" min="20" max="120" value="56">
+        <input id="bottomSizeNumber" type="number" min="20" max="120" value="56">
+      </div>
+
+      <label for="textColor">Text color</label>
+      <input id="textColor" type="color" value="#ffffff">
+
+      <button id="downloadBtn" disabled>Download Meme</button>
+    </section>
+
+    <section class="preview" aria-label="Meme preview">
+      <canvas id="memeCanvas" width="900" height="900"></canvas>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
